@@ -46,11 +46,7 @@ a:focus {
  * Main Wraper
  *-------------------------------------------------------------*/
   .wraper{
-<<<<<<< HEAD
 	margin-top: 60px;
-=======
-	margin-top: 40px;
->>>>>>> doi giao dien countdown
     padding: 1%;
     color: #fff;
 }
@@ -67,16 +63,9 @@ a:focus {
  * Quote
  *-------------------------------------------------------------*/
 .quote-words{
-<<<<<<< HEAD
 	margin-top: 50px;
 	margin-left: 20px;
 	margin-right: 20px;
-=======
-	margin-top: 0px;
-	margin-left: 20px;
-    margin-right: 20px;
-    width: 480px;
->>>>>>> doi giao dien countdown
 }
 
 
