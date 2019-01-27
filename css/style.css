@@ -10,7 +10,7 @@ body {
     font-weight : 400;
     background: #333;
     margin: 0;
-
+    overflow-x: hidden;
     }
 /*--------------------------------------
  * TYPOGRAPHY  
@@ -42,15 +42,92 @@ a:hover,
 a:focus {
     text-decoration : none;
     }
+
+/*------menu--------------*/
+.w3-sidebar{
+    height:100%;
+    width:200px;
+    background-color: rgba(0, 0, 0, 0.89);
+    position:fixed!important;
+    z-index:1;
+    overflow:auto}
+.w3-bar-block .w3-dropdown-hover,.w3-bar-block .w3-dropdown-click{
+    width:100%
+}
+.w3-bar-block .w3-dropdown-hover .w3-dropdown-content,.w3-bar-block .w3-dropdown-click .w3-dropdown-content{
+    min-width:100%
+}
+.w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{
+    width:100%;
+    text-align:left;
+    padding:10px 16px
+}
+.w3-main,#main{
+    transition:margin-left .4s
+}
+.w3-bar .w3-bar-item{
+    padding:8px 16px;
+    float:left;
+    width:auto;
+    border:none;
+    display:block;
+    outline:0
+}
+.w3-xlarge{
+    font-size:24px!important
+}
+
+.w3-bar .w3-button{
+    white-space:normal;
+}
+
+
+
+.w3-bar-block .w3-bar-item{
+    width:100%;
+    display:block;
+    padding:8px 16px;
+    text-align:left;
+    border:none;
+    white-space:normal;
+    float:none;
+    outline:0}
+.w3-bar-block.w3-center .w3-bar-item{
+    text-align:center
+}
+.w3-block{
+    display:block;
+    width:100%
+}
+.w3-top,.w3-bottom{
+    position:fixed;
+    width:100%;
+    z-index:1
+}
+.w3-top{
+    top:0
+}
+.w3-bottom{
+    bottom:0
+}
+.w3-teal,.w3-hover-teal:hover{
+    color:#fff!important;
+    display: inline-block;
+}
+.w3-teal button {
+    background-color: rgba(255,255,255, 0.001);
+    border: 0;
+    color: #fff;
+}
+
+
+/*-------end menu-----------*/
+
 /*-------------------------------------------------------------
  * Main Wraper
  *-------------------------------------------------------------*/
   .wraper{
-<<<<<<< HEAD
-	margin-top: 60px;
-=======
 	margin-top: 40px;
->>>>>>> doi giao dien countdown
     padding: 1%;
     color: #fff;
 }
@@ -60,23 +137,18 @@ a:focus {
  *-------------------------------------------------------------*/
 .header{
     margin-bottom: 0px;
-	margin-top: 15px; 
-	margin-left: 15px;
+	margin-top: 0px; 
+    margin-left: 0px;
+    padding-top: 0;
 }
 /*-------------------------------------------------------------
  * Quote
  *-------------------------------------------------------------*/
 .quote-words{
-<<<<<<< HEAD
-	margin-top: 50px;
-	margin-left: 20px;
-	margin-right: 20px;
-=======
 	margin-top: 0px;
 	margin-left: 20px;
     margin-right: 20px;
     width: 480px;
->>>>>>> doi giao dien countdown
 }
 
 
