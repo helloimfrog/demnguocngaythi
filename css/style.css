@@ -12,15 +12,25 @@ body {
     margin: 0;
     overflow-x: hidden;
     }
+
+header {
+    align-items: center; 
+    flex-direction: row; 
+    flex-wrap: wrap;
+    padding-top: 10px;
+    -webkit-flex-direction: row; 
+    display: flex;
+}
 /*--------------------------------------
  * TYPOGRAPHY  
  *--------------------------------------*/
 h1 {
-    font-size   : 15px;
+    font-size: 15px;
     margin: 0
     }
 h2{
-	margin-top: 0px; 
+    margin-top: 0px;
+    margin-bottom: 0px;
     font-size: 15px;
     font-weight: normal;
 }

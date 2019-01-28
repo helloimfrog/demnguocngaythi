@@ -5,7 +5,7 @@
 		thisEl = $(this);
 
 		//array of custom settings
-		var settings = { 
+		let settings = { 
 			'date': null,
 			'format': null
 		};
