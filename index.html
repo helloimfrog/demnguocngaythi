@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-	<script type="text/javascript">  
-	window.onload=function(){  
-	
-		var imgarray = new Array("img/bgr/background1.png", "img/bgr/background2.png", "img/bgr/background3.png", "img/bgr/background4.jpg", "img/bgr/background5.jpg");  
-		var spot = Math.floor(Math.random()* imgarray.length);  
-		document.getElementById("background-normal").src = imgarray[spot];  
-		
-		var quoteArray = new Array(
+	<script type="text/javascript">
+		window.onload = () => {
+
+			let imgarray = ["img/bgr/background1.png",
+				"img/bgr/background2.png",
+				"img/bgr/background3.png",
+				"img/bgr/background4.jpg",
+				"img/bgr/background5.jpg"];
+			let spot = Math.floor(Math.random() * imgarray.length);
+			document.getElementById("background-normal").src = imgarray[spot];
+
+			const quoteArray = [
 				"Lúc nào tôi cũng bay theo hướng bay của người khác, lần này tôi sẽ bay theo con đường mà tôi đã chọn.",
 				"Đừng đếm cuộc sống bằng thời gian mà hãy đếm cuộc sống bằng nụ cười.",
 				"Những cô gái hay cười chính là những cô gái xinh đẹp nhất. Và ai cũng vậy cả thôi, hãy luôn mỉm cười!",
@@ -24,13 +29,13 @@
 				"Phía sau tôi không có lấy một người, sao tôi dám ngã xuống.",
 				"Vấp ngã mà còn không chịu đứng lên, tính đợi người ta giẫm đạp lên hay sao?",
 				"Đừng chọn sống an nhàn vào những năm tháng còn có thể chịu khổ được."
-			);
-		var quoteId = Math.floor(Math.random() * quoteArray.length);
-		document.getElementById("quote-words").innerHTML = quoteArray[quoteId];
-		
-	}  
-	</script> 
-	
+			];
+			let quoteId = Math.floor(Math.random() * quoteArray.length);
+			document.getElementById("quote-words").innerHTML = quoteArray[quoteId];
+
+		}  
+	</script>
+
 
 	<link rel="icon" href="img/web_icon.png">
 	<meta charset="utf-8">
@@ -44,55 +49,90 @@
 	<link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Style CSS -->
 	<link href="css/style.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/style_phone.css" />
+	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)"
+		href="css/style_phone.css" />
+	<!--	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
 
-  </head>
-  <body>
-	<header class="header">
-  			<h1>Đếm ngược ngày thi</h1>
-  			<h2>Kì thi THPT Quốc gia 2019</h2>
-  		</header>
-  		<!-- .header -->
-  	<center>
-  	<section class="wraper">
-  
-  		<section class="countdown-wrapper">
-  			<ul id="back-countdiown">
-  				<li>                    
-  					<span class="days">00</span>
-  					<div class="smalltext">Ngày</div>
-  				</li>
-  				<li>
-  					<span class="hours">00</span>
-  					<div class="smalltext">Giờ</div>
-  				</li>
-  				<li>
-  					<span class="minutes">00</span>
-					  <div class="smalltext">Phút</div>
-  				</li>
-  				<li>
-  					<span class="seconds">00</span>
-  					<div class="smalltext">Giây</div>
-  				</li>               
-  			</ul><!-- #back-countdiown -->
-			<p class="quote-words" id="quote-words"></p>
-  		</section><!-- .countdown-wrapper -->
-  	<div class="fullscreen-bg">
-  		<img style="height: 100%; width: 100%; object-fit: center" id="background-normal" src="" />
-  	</div> <!-- .fullscreen-bg -->
+<body>
 
-  	<!-- Script -->
-  	<script src="js/jquery-2.1.4.min.js"></script>
-  	<script src="js/coundown-timer.js"></script>
-  	<script src="js/scripts.js"></script>
-  </center>
-   <div style="padding-top:120px;display: inline-block;">
-		<ul>
-			<li style="display: inline-block;"><a href="./privacy-policy/vn.html" style="text-decoration:underline"><small>Điều khoản </small></a>&nbsp|</li>
-			<li style="display: inline-block;"><a href="https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi" style="text-decoration:underline"><small>Tải ứng dụng</small></a>&nbsp|</li>
-			<li style="display: inline-block;"><a href="https://fb.me/demnguocngaythiapp"  style="text-decoration:underline"><small>Facebook Page</small></a></li>
-		<ul>
-   </div>
-		
-  	</body>
+	</head>
+
+	<body>
+		<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; color :black !important"
+			id="mySidebar">
+			<button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+			<a href="./privacy-policy/vn.html" class="w3-bar-item w3-button"
+				style="color: rgba(187, 173, 173, 0.575) !important">Điều
+				khoản</a>
+			<a href="https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi"
+				class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Tải ứng dụng cho
+				Android</a>
+			<a href="itms-services://?action=download-manifest&url=https://long2k1708.github.io/demnguocngaythi/files/mobile_apps/ios/app.plist"
+				class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Tải ứng dụng cho
+				iOS</a>
+			<a href="https://fb.me/demnguocngaythiapp" class="w3-bar-item w3-button"
+				style="color: rgba(187, 173, 173, 0.575) !important">Facebook
+				page</a>
+		</div>
+
+		<header>
+			<div class="w3-teal" style="display: inline-block; padding-left: 10px; padding-right: 10px">
+				<button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+			</div>
+
+			<div style="display: flex; justify-content: center;">
+				<div>
+					<h1>Đếm ngược ngày thi</h1>
+					<h2>Kì thi THPT Quốc gia 2019</h2>
+				</div>
+			</div>
+		</header>
+
+		<script>
+			function w3_open() {
+				document.getElementById("mySidebar").style.display = "block";
+			}
+
+			function w3_close() {
+				document.getElementById("mySidebar").style.display = "none";
+			}
+		</script>
+
+		<!-- .header -->
+		<center>
+			<section class="wraper">
+				<section class="countdown-wrapper">
+					<ul id="back-countdiown">
+						<li>
+							<span class="days">00</span>
+							<div class="smalltext">Ngày</div>
+
+						</li>
+						<li>
+							<span class="hours">00</span>
+							<div class="smalltext">Giờ</div>
+						</li>
+						<li>
+							<span class="minutes">00</span>
+							<div class="smalltext">Phút</div>
+						</li>
+						<li>
+							<span class="seconds">00</span>
+							<div class="smalltext">Giây</div>
+						</li>
+					</ul><!-- #back-countdiown -->
+					<p class="quote-words" id="quote-words"></p>
+				</section><!-- .countdown-wrapper -->
+				<div class="fullscreen-bg">
+					<img style="height: 100%; width: 100%; object-fit: center" id="background-normal" src="" />
+				</div> <!-- .fullscreen-bg -->
+
+				<!-- Script -->
+				<script src="js/jquery-2.1.4.min.js"></script>
+				<script src="js/coundown-timer.js"></script>
+				<script src="js/scripts.js"></script>
+		</center>
+
+	</body>
+
 </html>
