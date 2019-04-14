@@ -43,6 +43,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Đếm ngược ngày thi Beta Website</title>
 
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!-- web-fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<!-- font-awesome -->
@@ -51,88 +54,106 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)"
 		href="css/style_phone.css" />
-	<!--	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+	<!-- <link rel="stylesheet" href="css/styles.css"> -->
+
+
+	<!-- Script -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/coundown-timer.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<!-- Slider Javascript file -->
+	<script src="./js/jquery.slideandswipe.min.js"></script>
+	<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
 
 <body>
 
 	</head>
 
-	<body>
-		<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; color :black !important"
-			id="mySidebar">
-			<button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-			<a href="./privacy-policy/vn.html" class="w3-bar-item w3-button"
-				style="color: rgba(187, 173, 173, 0.575) !important">Điều
-				khoản</a>
-			<a href="https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi"
-				class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Tải ứng dụng cho
-				Android</a>
-			<a href="itms-services://?action=download-manifest&url=https://long2k1708.github.io/demnguocngaythi/files/mobile_apps/ios/app.plist"
-				class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Tải ứng dụng cho
-				iOS</a>
-			<a href="https://fb.me/demnguocngaythiapp" class="w3-bar-item w3-button"
-				style="color: rgba(187, 173, 173, 0.575) !important">Facebook
-				page</a>
+	<body class="ssm-toggle-nav">
+		<!-- sidebar -->
+		<div class="sidebar">
+			<nav class="nav">
+
+				<ul type="none" id="ul-sidebar">
+
+					<li style='background-color: bisque'></li>
+					<li><a href='./privacy-policy/vn.html'><small> Điều khoản</small></a></li>
+					<li><a href='https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi'><small>Tải
+								ứng dụng cho Android</small></a></li>
+					<li><a
+							href='itms-services://?action=download-manifest&url=https://long2k1708.github.io/demnguocngaythi/files/mobile_apps/ios/app.plist'>
+							<small>Tải ứng dụng cho iOS</small></a></li>
+					<li><a href='https://www.facebook.com/DemNguocNgayThiApp'> <small>Facebook Page</small></a></li>
+					<!-- CSS stylesheet for sliding-swipe-menu -->
+					<link rel="stylesheet" href="css/slide-and-swipe-menu.css">
+				</ul>
+				<div class="right-btn">
+					<span class="bar">
+						<i class="	fa fa-align-justify" style="font-size:36px;"></i>
+					</span>
+				</div>
+			</nav>
+
 		</div>
 
-		<header>
-			<div class="w3-teal" style="display: inline-block; padding-left: 10px; padding-right: 10px">
-				<button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-			</div>
 
-			<div style="display: flex; justify-content: center;">
-				<div>
-					<h1>Đếm ngược ngày thi</h1>
-					<h2>Kì thi THPT Quốc gia 2019</h2>
-				</div>
+		<!--content-->
+		<div>
+
+			<div style="display:flex; justify-content: left ; " class="ssm-toggle-nav">
+				<header class="header" style="margin-left:50px; margin-top:15px">
+					<h1 id="header_1">Đếm ngược ngày thi</h1>
+					<h2 id="header_2">Kì thi THPT Quốc gia 2019</h2>
+				</header>
 			</div>
-		</header>
+			<!-- <script>
+						function toggleSidebar() {
+							document.getElementById("sidebar").classList.toggle('active');
+						}
+			
+			
+					</script> -->
+
+			<!--end menu-->
+
+			<center>
+				<section class="wraper">
+					<section class="countdown-wrapper">
+						<ul id="back-countdiown">
+							<li>
+								<span class="days">00</span>
+								<div class="smalltext">Ngày</div>
+
+							</li>
+							<li>
+								<span class="hours">00</span>
+								<div class="smalltext">Giờ</div>
+							</li>
+							<li>
+								<span class="minutes">00</span>
+								<div class="smalltext">Phút</div>
+							</li>
+							<li>
+								<span class="seconds">00</span>
+								<div class="smalltext">Giây</div>
+							</li>
+						</ul><!-- #back-countdiown -->
+						<p class="quote-words" id="quote-words"></p>
+					</section><!-- .countdown-wrapper -->
+					<div class="fullscreen-bg">
+						<img style="height: 100%; width: 100%; object-fit: center" id="background-normal" src="" />
+					</div> <!-- .fullscreen-bg -->
+			</center>
+		</div>
+
+		<!-- <a href="#" class="" title="open nav">open / close navigation</a> -->
 
 		<script>
-			function w3_open() {
-				document.getElementById("mySidebar").style.display = "block";
-			}
-
-			function w3_close() {
-				document.getElementById("mySidebar").style.display = "none";
-			}
+			$(document).ready(function () {
+				$('.nav').slideAndSwipe();
+			});
 		</script>
-
-		<!-- .header -->
-		<center>
-			<section class="wraper">
-				<section class="countdown-wrapper">
-					<ul id="back-countdiown">
-						<li>
-							<span class="days">00</span>
-							<div class="smalltext">Ngày</div>
-
-						</li>
-						<li>
-							<span class="hours">00</span>
-							<div class="smalltext">Giờ</div>
-						</li>
-						<li>
-							<span class="minutes">00</span>
-							<div class="smalltext">Phút</div>
-						</li>
-						<li>
-							<span class="seconds">00</span>
-							<div class="smalltext">Giây</div>
-						</li>
-					</ul><!-- #back-countdiown -->
-					<p class="quote-words" id="quote-words"></p>
-				</section><!-- .countdown-wrapper -->
-				<div class="fullscreen-bg">
-					<img style="height: 100%; width: 100%; object-fit: center" id="background-normal" src="" />
-				</div> <!-- .fullscreen-bg -->
-
-				<!-- Script -->
-				<script src="js/jquery-2.1.4.min.js"></script>
-				<script src="js/coundown-timer.js"></script>
-				<script src="js/scripts.js"></script>
-		</center>
-
 	</body>
 
 </html>

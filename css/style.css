@@ -20,6 +20,14 @@ header {
     padding-top: 10px;
     -webkit-flex-direction: row; 
     display: flex;
+
+   
+}
+
+#header_2{
+    position: relative;
+    top: 20px;
+    left: -160px;
 }
 /*--------------------------------------
  * TYPOGRAPHY  
@@ -421,4 +429,26 @@ a:focus {
 .copyright li:last-child{
     border-left: 1px solid rgba(255,255,255,.2);
     padding-left: 12px;
+}
+
+.fighter{
+    position: relative;
+    z-index: 2;
+    right: 0px;
+}
+
+.sidebar{
+    width: 400px;
+    /* height: 100pc; */
+}
+
+.right-btn{
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.bar{
+    position: absolute;
+    right: -40px;
+    top: 20px;
 }
