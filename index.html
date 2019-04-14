@@ -46,48 +46,46 @@
 	<!-- Style CSS -->
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="css/style_phone.css" />
-<!--	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+
+
 
 <body>
 
 	</head>
 
 	<body>
+		
+				<!--menu-->
 
-		<!--MENU-->
-
-		<!-- Test SideBar -->
-
-		<!-- Sidebar -->
-		<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none; color :black !important" id="mySidebar">
-			<button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-			<a href="./privacy-policy/vn.html" class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Điều khoản</a>
-			<a href="https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi" class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Tải ứng dụng</a>
-			<a href="https://fb.me/demnguocngaythiapp" class="w3-bar-item w3-button" style="color: rgba(187, 173, 173, 0.575) !important">Facebook page</a>
-		</div>
-
-		<div class="w3-teal" style="background-color:none;display: inline-block;" >
-			<button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
-			<button >
-				<header class="header">
-					<h1>Đếm ngược ngày thi</h1>
-					<h2>Kì thi THPT Quốc gia 2019</h2>
-				</header>
-			</button>
-
-		</div>
-
-		<script>
-			function w3_open() {
-				document.getElementById("mySidebar").style.display = "block";
-			}
-
-			function w3_close() {
-				document.getElementById("mySidebar").style.display = "none";
-			}
-		</script>
+				
+				<div id='sidebar'>					
+					<ul>
+						<li style='background-color: bisque'></li>
+						<li><a href='./privacy-policy/vn.html'><small> Điều khoản</small></a></li>
+						<li><a href='https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi'><small>Tải ứng dụng cho Android</small></a></li>
+						<li><a href='itms-services://?action=download-manifest&url=https://long2k1708.github.io/demnguocngaythi/files/mobile_apps/ios/app.plist'> <small>Tải ứng dụng cho iOS</small></a></li>
+						<li><a href='https://www.facebook.com/DemNguocNgayThiApp'> <small>Facebook Page</small></a></li>
+					</ul>
+					<div class="toggle-btn" onclick="toggleSidebar()">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div style="display:flex; justify-content: left ; ">
+					<header class="header" style="margin-left:50px; margin-top:15px">
+							<h1>Đếm ngược ngày thi</h1>
+							<h2>Kì thi THPT Quốc gia 2019</h2>
+					</header>
+			</div>
+				<script>
+					function toggleSidebar(){
+						document.getElementById("sidebar").classList.toggle('active');
+					}
+				</script>
+				<!--end menu-->
+		
 	
-		<!-- .header -->
 		<center>
 			<section class="wraper">
 
