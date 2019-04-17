@@ -64,21 +64,20 @@
 
 	<!-- Slider Javascript file -->
 	<script src="./js/jquery.slideandswipe.min.js"></script>
-	<script src="http://labs.rampinteractive.co.uk/touchSwipe/jquery.touchSwipe.min.js"></script>
+	<script src="./js/jquery.slideandswipe.js"></script>
+	<script src="./js/jquery.touchSwipe.min.js"></script>
+</head>
 
-<body>
-
-	</head>
-
-	<body class="ssm-toggle-nav">
+<body >
+	<div >
 		<!-- sidebar -->
-		<div class="sidebar">
+		<div class="sidebar ">
 			<nav class="nav">
 
 				<ul type="none" id="ul-sidebar">
 
 					<li style='background-color: bisque'></li>
-					<li><a href='./privacy-policy/vn.html'><small> Điều khoản</small></a></li>
+					<li><a href='./privacy-policy/vn.html' target="_blank"><small> Điều khoản</small></a></li>
 					<li><a href='https://play.google.com/store/apps/details?id=com.princefrog2k.countdownngaythi&hl=vi'><small>Tải
 								ứng dụng cho Android</small></a></li>
 					<li><a
@@ -88,15 +87,13 @@
 					<!-- CSS stylesheet for sliding-swipe-menu -->
 					<link rel="stylesheet" href="css/slide-and-swipe-menu.css">
 				</ul>
-				<div class="right-btn">
+				<div class="right-btn ssm-toggle-nav">
 					<span class="bar">
 						<i class="	fa fa-align-justify" style="font-size:36px;"></i>
 					</span>
 				</div>
 			</nav>
-
 		</div>
-
 
 		<!--content-->
 		<div>
@@ -144,6 +141,7 @@
 					<div class="fullscreen-bg">
 						<img style="height: 100%; width: 100%; object-fit: center" id="background-normal" src="" />
 					</div> <!-- .fullscreen-bg -->
+				</section>
 			</center>
 		</div>
 
@@ -154,6 +152,8 @@
 				$('.nav').slideAndSwipe();
 			});
 		</script>
-	</body>
+
+	</div>
+</body>
 
 </html>

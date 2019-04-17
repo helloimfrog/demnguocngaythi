@@ -135,6 +135,7 @@
             /**
              * Open / close by click on burger icon
              */
+
             var hideNavigation = (function() {
                 nav.removeClass('ssm-nav-visible');
                 scrollNav(navWidth, settings.speed);
